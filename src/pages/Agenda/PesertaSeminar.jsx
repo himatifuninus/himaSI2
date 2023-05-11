@@ -12,12 +12,11 @@ const PesertaSeminar = () => {
   const getUsers = async () => {
     const res = await supabase.from("table_seminar").select();
     setUsers(res.data);
+    setLoading(false);
   };
 
   useEffect(() => {
     getUsers();
-
-    setLoading(false);
   }, []);
 
   if (loading) {

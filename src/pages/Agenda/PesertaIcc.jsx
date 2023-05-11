@@ -7,17 +7,16 @@ import { supabase } from "../../supabase";
 const PesertaIcc = () => {
   const [users, setUsers] = useState([]);
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const getUsers = async () => {
     const res = await supabase.from("table_icc").select();
     setUsers(res.data);
+    setLoading(false);
   };
 
   useEffect(() => {
     getUsers();
-
-    setLoading(false);
   }, []);
 
   if (loading) {
