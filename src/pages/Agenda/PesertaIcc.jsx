@@ -9,9 +9,16 @@ const PesertaIcc = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const getUsers = async () => {};
+  const getUsers = async () => {
+    const res = await supabase.from("table_icc").select();
+    setUsers(res.data);
+  };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    getUsers();
+
+    setLoading(false);
+  }, []);
 
   if (loading) {
     return (
@@ -56,35 +63,41 @@ const PesertaIcc = () => {
                 </tr>
               </thead>
               <tbody className="bg-white">
-                <tr className="text-gray-700">
-                  <td className="px-4 py-3 border">
-                    <div className="flex items-center text-sm">
-                      <p className="font-semibold text-black">1</p>
-                    </div>
-                  </td>
-                  <td className="px-4 py-3 border">
-                    <div className="flex items-center text-sm">
-                      <p className="font-semibold capitalize text-black">tes</p>
-                    </div>
-                  </td>
-                  <td className="px-4 py-3 border">
-                    <div className="flex items-center text-sm">
-                      <p className="font-semibold text-black">100</p>
-                    </div>
-                  </td>
-                  <td className="px-4 py-3 border">
-                    <div className="flex items-center text-sm">
-                      <p className="font-semibold capitalize text-black">
-                        A100
-                      </p>
-                    </div>
-                  </td>
-                  <td className="px-4 py-3 border">
-                    <div className="flex items-center text-sm">
-                      <p className="font-semibold  text-black">2021</p>
-                    </div>
-                  </td>
-                </tr>
+                {users.map((user, index) => (
+                  <tr className="text-gray-700" key={user.id}>
+                    <td className="px-4 py-3 border">
+                      <div className="flex items-center text-sm">
+                        <p className="font-semibold text-black">{index + 1}</p>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 border">
+                      <div className="flex items-center text-sm">
+                        <p className="font-semibold capitalize text-black">
+                          {user.nama}
+                        </p>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 border">
+                      <div className="flex items-center text-sm">
+                        <p className="font-semibold text-black">{user.nim}</p>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 border">
+                      <div className="flex items-center text-sm">
+                        <p className="font-semibold capitalize text-black">
+                          {user.kelas}
+                        </p>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 border">
+                      <div className="flex items-center text-sm">
+                        <p className="font-semibold text-black">
+                          {user.angkatan}
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

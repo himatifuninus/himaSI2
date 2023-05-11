@@ -7,11 +7,18 @@ import { supabase } from "../../supabase";
 const PesertaSeminar = () => {
   const [users, setUsers] = useState([]);
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  const getUsers = async () => {};
+  const getUsers = async () => {
+    const res = await supabase.from("table_seminar").select();
+    setUsers(res.data);
+  };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    getUsers();
+
+    setLoading(false);
+  }, []);
 
   if (loading) {
     return (
@@ -51,23 +58,29 @@ const PesertaSeminar = () => {
                 </tr>
               </thead>
               <tbody className="bg-white">
-                <tr className="text-gray-700">
-                  <td className="px-4 py-3 border">
-                    <div className="flex items-center text-sm">
-                      <p className="font-semibold text-black">1</p>
-                    </div>
-                  </td>
-                  <td className="px-4 py-3 border">
-                    <div className="flex items-center text-sm">
-                      <p className="font-semibold capitalize text-black">tes</p>
-                    </div>
-                  </td>
-                  <td className="px-4 py-3 border">
-                    <div className="flex items-center text-sm">
-                      <p className="font-semibold text-black">uninus</p>
-                    </div>
-                  </td>
-                </tr>
+                {users.map((user, index) => (
+                  <tr className="text-gray-700" key={user.id}>
+                    <td className="px-4 py-3 border">
+                      <div className="flex items-center text-sm">
+                        <p className="font-semibold text-black">{index + 1}</p>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 border">
+                      <div className="flex items-center text-sm">
+                        <p className="font-semibold capitalize text-black">
+                          {user.nama}
+                        </p>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 border">
+                      <div className="flex items-center text-sm">
+                        <p className="font-semibold text-black">
+                          {user.instansi}
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

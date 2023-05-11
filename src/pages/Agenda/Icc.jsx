@@ -22,7 +22,42 @@ const Icc = () => {
 
   const navigate = useNavigate();
 
-  const register = async (e) => {};
+  const register = async (e) => {
+    e.preventDefault();
+    setIsProcessing(true);
+
+    try {
+      await supabase.from("table_icc").insert({
+        nama: nama,
+        nim: nim,
+        nowa: wa,
+        kelas: kelas,
+        angkatan: angkatan,
+        laptop: laptop,
+      });
+
+      Swal.fire({
+        title: "Registrasi Berhasil",
+        text: "Setelah registrasi, anda diminta untuk masuk grup whatsapp ICC season 2",
+        icon: "success",
+        showCancelButton: true,
+        confirmButtonColor: "#00FFCA",
+        cancelButtonColor: "#05BFDB",
+        confirmButtonText: "Masuk Grup",
+        cancelButtonText: "Lanjutkan",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location = "https://chat.whatsapp.com/BzBnJ95YfvK2DtqAjDB4gi";
+        }
+      });
+
+      navigate("/Icc/PesertaIcc");
+    } catch (error) {
+      console.error(error.message);
+    } finally {
+      setIsProcessing(false);
+    }
+  };
 
   return (
     <div className="">
@@ -107,6 +142,7 @@ const Icc = () => {
                   onChange={(event) => {
                     setKelas(event.target.value);
                   }}
+                  value={kelas}
                 >
                   <option value="A1" selected>
                     A1
@@ -133,6 +169,7 @@ const Icc = () => {
                   onChange={(event) => {
                     setAngkatan(event.target.value);
                   }}
+                  value={angkatan}
                 >
                   <option value="2020">2020</option>
                   <option value="2021">2021</option>
@@ -154,6 +191,7 @@ const Icc = () => {
                   onChange={(event) => {
                     setLaptop(event.target.value);
                   }}
+                  value={laptop}
                 >
                   <option value="ya">Ya</option>
                   <option value="tidak" selected>

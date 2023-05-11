@@ -19,21 +19,19 @@ const Seminar = () => {
   const navigate = useNavigate();
 
   const register = async (e) => {
+    setIsProcessing(true);
+
     e.preventDefault();
 
-    setIsProcessing(true);
-    try {
-      await addDoc(booksCollectionRef, {
-        nama: nama,
-        instansi: instansi,
-        nowa: wa,
-      });
-      navigate("/");
-    } catch (error) {
-      console.error(error.message);
-    } finally {
-      setIsProcessing(false);
-    }
+    await supabase.from("table_seminar").insert({
+      nama: nama,
+      instansi: instansi,
+      email: email,
+    });
+
+    setIsProcessing(false);
+
+    navigate("/Seminar/PesertaSeminar");
   };
 
   return (
@@ -82,7 +80,6 @@ const Seminar = () => {
                 id="instansi"
                 className="bg-[#E9E9E9] w-[80vw] h-8 rounded-md outline-none focus:outline-[#1C5FD4] duration-500 pl-[5vw] md:w-[60vw] md:h-[3rem] md:pl-[2vw] lg:w-[30vw] lg:h-[2.5rem]"
                 placeholder="Masukan instansi"
-                min={0}
                 onChange={(event) => {
                   setInstansi(event.target.value);
                 }}
