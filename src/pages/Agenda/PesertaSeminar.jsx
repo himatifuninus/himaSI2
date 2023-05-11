@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar";
 import logoSeminar from "../../assets/seminar.png";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { supabase } from "../../supabase";
 
 const PesertaSeminar = () => {
   const [users, setUsers] = useState([]);
