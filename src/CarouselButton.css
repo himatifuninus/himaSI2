@@ -1,0 +1,26 @@
+.react-multiple-carousel__arrow--left {
+  margin: -34px;
+  background: white;
+}
+
+.react-multiple-carousel__arrow--right {
+  margin: 7px;
+  z-index: 0;
+  background: white;
+}
+
+.react-multiple-carousel__arrow--left:hover {
+  background: lightblue;
+}
+
+.react-multiple-carousel__arrow--right:hover {
+  background: lightblue;
+}
+
+.react-multiple-carousel__arrow--left:before {
+  color: #020181;
+}
+
+.react-multiple-carousel__arrow--right:before {
+  color: #020181;
+}
