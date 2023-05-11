@@ -4,6 +4,7 @@ import logoIcc from "../../assets/logo-icc-season2.png";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Swal from "sweetalert2";
+import { supabase } from "../../supabase";
 
 const Icc = () => {
   const [nama, setNama] = useState("");

@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import logoSeminar from "../../assets/seminar-web-development.png";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { supabase } from "../../supabase";
 
 const Seminar = () => {
   const [nama, setNama] = useState("");

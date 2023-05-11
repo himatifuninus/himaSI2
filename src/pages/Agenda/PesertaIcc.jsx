@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar";
 import logoIcc from "../../assets/logo-icc-season2.png";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { supabase } from "../../supabase";
 
 const PesertaIcc = () => {
   const [users, setUsers] = useState([]);
