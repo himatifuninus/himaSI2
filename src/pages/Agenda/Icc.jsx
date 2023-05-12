@@ -1,10 +1,10 @@
-import Navbar from "../../components/Navbar";
+import { useState, lazy } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logoIcc from "../../assets/logo-icc-season2.png";
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Swal from "sweetalert2";
 import { supabase } from "../../supabase";
+import Swal from "sweetalert2";
+import logoIcc from "../../assets/logo-icc-season2.png";
+const Navbar = lazy(() => import("../../components/Navbar"));
 
 const Icc = () => {
   const [nama, setNama] = useState("");

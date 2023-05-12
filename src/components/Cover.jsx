@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import image from "../assets/cover.png";
 import AOS from "aos";
 import "aos/dist/aos.css";

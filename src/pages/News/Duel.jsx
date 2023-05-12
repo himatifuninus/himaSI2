@@ -1,6 +1,7 @@
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import { lazy } from "react";
 import chatGPTvsGoogle from "../../assets/chatGPTvsGoogle.png";
+const Navbar = lazy(() => import("../../components/Navbar"));
+const Footer = lazy(() => import("../../components/Footer"));
 
 const Duel = () => {
   return (

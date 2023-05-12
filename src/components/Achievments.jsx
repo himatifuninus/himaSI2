@@ -1,8 +1,7 @@
+import { useState } from "react";
 import Achievement1 from "../assets/achievement1.jpeg";
 import Achievement2 from "../assets/sukmaraka.jpg";
 import Achievement3 from "../assets/achievemen_icc.jpg";
-
-import { useState } from "react";
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

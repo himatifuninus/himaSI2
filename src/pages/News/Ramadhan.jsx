@@ -1,6 +1,7 @@
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import { lazy } from "react";
 import ramadhan from "../../assets/ramadhan-berkah.jpg";
+const Navbar = lazy(() => import("../../components/Navbar"));
+const Footer = lazy(() => import("../../components/Footer"));
 
 const Ramadhan = () => {
   return (

@@ -1,6 +1,7 @@
-import Accordion from "../../components/Accordion";
-import AccordionList from "../../components/AccordionList";
-import Navbar from "../../components/Navbar";
+import { lazy } from "react";
+const Accordion = lazy(() => import("../../components/Accordion"));
+const AccordionList = lazy(() => import("../../components/AccordionList"));
+const Navbar = lazy(() => import("../../components/Navbar"));
 
 function VisiMisi() {
   return (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -86,7 +86,7 @@ const Berita = () => {
                       </div>
                       <div className="flex flex-col justify-evenly ml-[20px] mt-[2px] lg:mt-[8px] h-[126px] lg:h-[156px] w-[200px] ">
                         <h1 className="text-[20px] lg:text-[18px]">
-                            Ramadhan berkah bersama Teknik jilid VII
+                          Ramadhan berkah bersama Teknik jilid VII
                         </h1>
                         <div className="flex items-center gap-2 animate-pulse">
                           <div className="bg-red-500 w-[10px] rounded-full h-[10px]"></div>
