@@ -1,9 +1,10 @@
-import Navbar from "../components/Navbar";
-import Cover from "../components/Cover";
-import Achievments from "../components/Achievments";
-import Carousel from "../components/MyCarousel";
-import Footer from "../components/Footer";
-import Event from "../components/Event";
+import { lazy } from "react";
+const Navbar = lazy(() => import("../components/Navbar"));
+const Cover = lazy(() => import("../components/Cover"));
+const Achievments = lazy(() => import("../components/Achievments"));
+const Carousel = lazy(() => import("../components/MyCarousel"));
+const Footer = lazy(() => import("../components/Footer"));
+const Event = lazy(() => import("../components/Event"));
 
 const First = () => {
   const images = [

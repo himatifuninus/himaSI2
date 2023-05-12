@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Discuss from "../assets/makrab-2023.jpg";
 import Discuss2 from "../assets/icc.jpg";
 import studyBanding from "../assets/study-banding.jpeg";

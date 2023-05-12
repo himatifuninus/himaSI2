@@ -1,13 +1,10 @@
-import Navbar from "../../components/Navbar";
-import logoIcc from "../../assets/logo-icc-season2.png";
-import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState, useEffect, lazy } from "react";
 import { supabase } from "../../supabase";
+import logoIcc from "../../assets/logo-icc-season2.png";
+const Navbar = lazy(() => import("../../components/Navbar"));
 
 const PesertaIcc = () => {
   const [users, setUsers] = useState([]);
-
-  const [loading, setLoading] = useState(true);
 
   const getUsers = async () => {
     const res = await supabase.from("table_icc").select();
@@ -18,19 +15,6 @@ const PesertaIcc = () => {
   useEffect(() => {
     getUsers();
   }, []);
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-[50vh]">
-        <FontAwesomeIcon
-          icon="fa-solid fa-circle-notch"
-          spin
-          size="2xl"
-          style={{ color: "#6056DB" }}
-        />
-      </div>
-    );
-  }
 
   return (
     <>

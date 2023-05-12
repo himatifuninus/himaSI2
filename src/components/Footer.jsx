@@ -1,8 +1,6 @@
-import React from "react";
-import "../index.css";
 import uninus from "../assets/uninus.png/";
 import himatif from "../assets/himatif.png";
-import { Link } from "react-router-dom";
+import "../index.css";
 
 const Footer = () => {
   return (

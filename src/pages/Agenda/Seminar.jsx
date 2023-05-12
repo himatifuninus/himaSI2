@@ -1,9 +1,9 @@
-import Navbar from "../../components/Navbar";
+import { lazy, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logoSeminar from "../../assets/seminar-web-development.png";
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { supabase } from "../../supabase";
+import logoSeminar from "../../assets/seminar-web-development.png";
+const Navbar = lazy(() => import("../../components/Navbar"));
 
 const Seminar = () => {
   const [nama, setNama] = useState("");

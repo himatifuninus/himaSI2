@@ -1,6 +1,8 @@
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import { lazy } from "react";
 import openai from "../../assets/openai.png";
+const Navbar = lazy(() => import("../../components/Navbar"));
+const Footer = lazy(() => import("../../components/Footer"));
+
 const OpenAi = () => {
   return (
     <div>

@@ -1,13 +1,10 @@
-import Navbar from "../../components/Navbar";
+import { useState, useEffect, lazy } from "react";
 import logoSeminar from "../../assets/seminar.png";
-import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { supabase } from "../../supabase";
+const Navbar = lazy(() => import("../../components/Navbar"));
 
 const PesertaSeminar = () => {
   const [users, setUsers] = useState([]);
-
-  const [loading, setLoading] = useState(true);
 
   const getUsers = async () => {
     const res = await supabase.from("table_seminar").select();
@@ -18,19 +15,6 @@ const PesertaSeminar = () => {
   useEffect(() => {
     getUsers();
   }, []);
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-[50vh]">
-        <FontAwesomeIcon
-          icon="fa-solid fa-circle-notch"
-          spin
-          size="2xl"
-          style={{ color: "#0C134F" }}
-        />
-      </div>
-    );
-  }
 
   return (
     <>

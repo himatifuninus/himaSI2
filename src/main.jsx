@@ -1,9 +1,9 @@
-import React from "react";
+import React, { lazy } from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
+import "./index.css";
+const App = lazy(() => import("./App"));
 
 library.add(faCircleNotch);
 
