@@ -85,10 +85,10 @@ const PesertaIcc = () => {
                         <p
                           className={`font-semibold ${
                             user.pembayaran.toLowerCase() === "belum bayar"
-                              ? "text-red-500 bg-red-100 rounded-md p-[1vw]"
+                              ? "text-red-500 bg-red-100 rounded-md p-[2.5vw] md:p-[1vw]"
                               : user.pembayaran.toLowerCase() === "belum lunas"
-                              ? "text-yellow-500 bg-yellow-100 rounded-md p-[1vw]"
-                              : "text-green-500 bg-green-100 rounded-md p-[1vw]"
+                              ? "text-yellow-500 bg-yellow-100 rounded-md p-[2.5vw] md:p-[1vw]"
+                              : "text-green-500 bg-green-100 rounded-md p-[2.5vw] md:p-[1vw]"
                           }`}
                         >
                           {user.pembayaran}
