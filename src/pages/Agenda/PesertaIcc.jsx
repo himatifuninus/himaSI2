@@ -43,6 +43,7 @@ const PesertaIcc = () => {
                   <th className="px-4 py-3">NIM</th>
                   <th className="px-4 py-3">Kelas</th>
                   <th className="px-4 py-3">Angkatan</th>
+                  <th className="px-4 py-3">Status pembayaran</th>
                 </tr>
               </thead>
               <tbody className="bg-white">
@@ -76,6 +77,21 @@ const PesertaIcc = () => {
                       <div className="flex items-center text-sm">
                         <p className="font-semibold text-black">
                           {user.angkatan}
+                        </p>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 border">
+                      <div className="flex items-center text-sm">
+                        <p
+                          className={`font-semibold ${
+                            user.pembayaran.toLowerCase() === "belum bayar"
+                              ? "text-red-500 bg-red-100 rounded-md p-[1vw]"
+                              : user.pembayaran.toLowerCase() === "belum lunas"
+                              ? "text-yellow-500 bg-yellow-100 rounded-md p-[1vw]"
+                              : "text-green-500 bg-green-100 rounded-md p-[1vw]"
+                          }`}
+                        >
+                          {user.pembayaran}
                         </p>
                       </div>
                     </td>
