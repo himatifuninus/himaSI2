@@ -13,6 +13,7 @@ const Icc = () => {
   const [kelas, setKelas] = useState("A1");
   const [angkatan, setAngkatan] = useState("2022");
   const [laptop, setLaptop] = useState("tidak");
+  const [pembayaran, setPembayaran] = useState("Belum bayar");
 
   const [isProcessing, setIsProcessing] = useState(false);
 
@@ -34,6 +35,7 @@ const Icc = () => {
         kelas: kelas,
         angkatan: angkatan,
         laptop: laptop,
+        pembayaran: pembayaran,
       });
 
       Swal.fire({
