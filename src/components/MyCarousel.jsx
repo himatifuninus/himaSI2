@@ -100,7 +100,15 @@ const Berita = () => {
                         <div className="flex items-center gap-2 animate-pulse">
                           <div className="bg-red-500 w-[10px] rounded-full h-[10px]"></div>
                           <span className="text-[12px] lg:text-[13px] text-red-500">
-                            {differenceInDays3} hari yang lalu
+                            {differenceInDays3 === 0 ? (
+                              <span className="text-[12px] lg:text-[13px] text-red-500">
+                                Saat ini
+                              </span>
+                            ) : (
+                              <span className="text-[12px] lg:text-[13px] text-red-500">
+                                {differenceInDays3} hari yang lalu
+                              </span>
+                            )}
                           </span>
                         </div>
                         <p className="text-[13px] lg:text-[12px]">
@@ -132,7 +140,15 @@ const Berita = () => {
                         <div className="flex items-center gap-2 animate-pulse">
                           <div className="bg-red-500 w-[10px] rounded-full h-[10px]"></div>
                           <span className="text-[12px] lg:text-[13px] text-red-500">
-                            {differenceInDays3} hari yang lalu
+                            {differenceInDays3 === 0 ? (
+                              <span className="text-[12px] lg:text-[13px] text-red-500">
+                                Saat ini
+                              </span>
+                            ) : (
+                              <span className="text-[12px] lg:text-[13px] text-red-500">
+                                {differenceInDays3} hari yang lalu
+                              </span>
+                            )}
                           </span>
                         </div>
                         <p className="text-[13px] lg:text-[12px]">
@@ -339,7 +355,15 @@ const Berita = () => {
                     <div className="flex items-center gap-1 sm:gap-2 animate-pulse">
                       <div className="bg-red-500 w-[7px] sm:w-[10px] rounded-full h-[7px] sm:h-[10px]"></div>
                       <span className="text-[9px] sm:text-[12px] text-red-500">
-                        {differenceInDays3} hari yang lalu
+                        {differenceInDays3 === 0 ? (
+                          <span className="text-[12px] lg:text-[13px] text-red-500">
+                            Saat ini
+                          </span>
+                        ) : (
+                          <span className="text-[12px] lg:text-[13px] text-red-500">
+                            {differenceInDays3} hari yang lalu
+                          </span>
+                        )}
                       </span>
                     </div>
                     <p className="text-[8px] sm:text-[13px] w-[180px] mb-1">
@@ -370,7 +394,15 @@ const Berita = () => {
                     <div className="flex items-center gap-1 sm:gap-2 animate-pulse">
                       <div className="bg-red-500 w-[7px] sm:w-[10px] rounded-full h-[7px] sm:h-[10px]"></div>
                       <span className="text-[9px] sm:text-[12px] text-red-500">
-                        {differenceInDays3} hari yang lalu
+                        {differenceInDays3 === 0 ? (
+                          <span className="text-[12px] lg:text-[13px] text-red-500">
+                            Saat ini
+                          </span>
+                        ) : (
+                          <span className="text-[12px] lg:text-[13px] text-red-500">
+                            {differenceInDays3} hari yang lalu
+                          </span>
+                        )}
                       </span>
                     </div>
                     <p className="text-[8px] sm:text-[13px] w-[180px] mb-1">
