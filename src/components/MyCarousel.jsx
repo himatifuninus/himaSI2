@@ -102,7 +102,7 @@ const Berita = () => {
                           <span className="text-[12px] lg:text-[13px] text-red-500">
                             {differenceInDays3 === 0 ? (
                               <span className="text-[12px] lg:text-[13px] text-red-500">
-                                Saat ini
+                                Terbaru
                               </span>
                             ) : (
                               <span className="text-[12px] lg:text-[13px] text-red-500">
@@ -142,7 +142,7 @@ const Berita = () => {
                           <span className="text-[12px] lg:text-[13px] text-red-500">
                             {differenceInDays3 === 0 ? (
                               <span className="text-[12px] lg:text-[13px] text-red-500">
-                                Saat ini
+                                Terbaru
                               </span>
                             ) : (
                               <span className="text-[12px] lg:text-[13px] text-red-500">
@@ -357,7 +357,7 @@ const Berita = () => {
                       <span className="text-[9px] sm:text-[12px] text-red-500">
                         {differenceInDays3 === 0 ? (
                           <span className="text-[12px] lg:text-[13px] text-red-500">
-                            Saat ini
+                            Terbaru
                           </span>
                         ) : (
                           <span className="text-[12px] lg:text-[13px] text-red-500">
@@ -396,7 +396,7 @@ const Berita = () => {
                       <span className="text-[9px] sm:text-[12px] text-red-500">
                         {differenceInDays3 === 0 ? (
                           <span className="text-[12px] lg:text-[13px] text-red-500">
-                            Saat ini
+                            Terbaru
                           </span>
                         ) : (
                           <span className="text-[12px] lg:text-[13px] text-red-500">
