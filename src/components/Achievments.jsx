@@ -2,6 +2,7 @@ import { useState } from "react";
 import Achievement1 from "../assets/achievement1.jpeg";
 import Achievement2 from "../assets/sukmaraka.jpg";
 import Achievement3 from "../assets/achievemen_icc.jpg";
+import Achievement4 from "../assets/iccs2.png";
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -9,19 +10,24 @@ const App = () => {
 
   const images = [
     {
-      id: 1,
-      src: Achievement1,
-      caption: "Juara III Pagar Nusa UNINUS",
+      id: 4,
+      src: Achievement4,
+      caption: "Peserta 1 & 2 ICC Season 2",
     },
     {
-      id: 2,
+      id: 3,
       src: Achievement2,
       caption: "Medali Perunggu Cabor Judo",
     },
     {
-      id: 3,
+      id: 2,
+      src: Achievement1,
+      caption: "Juara III Pagar Nusa UNINUS",
+    },
+    {
+      id: 1,
       src: Achievement3,
-      caption: "Juara 1 & 2 ICC",
+      caption: "Peserta 1 & 2 ICC Season 1",
     },
   ];
 
@@ -43,7 +49,7 @@ const App = () => {
         data-aos-duration="1000"
         data-aos-once="true"
       >
-        <h1 className="bg-[#020181] text-white font-semibold p-4 rounded-lg mb-12 w-fit md:ml-[5vw]">
+        <h1 className="bg-[#020181] text-white font-semibold p-4 rounded-lg mb-12 w-fit md:ml-[0.5rem]">
           Achievments
         </h1>
       </div>

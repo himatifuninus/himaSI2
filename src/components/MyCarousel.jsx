@@ -327,6 +327,37 @@ const Berita = () => {
                 >
                   <div className="w-auto h-[200px] rounded-t-[0.64rem] text-center">
                     <img
+                      src={icc2}
+                      alt="icc2"
+                      className="rounded-t-[0.58rem] h-full group-hover:opacity-90 object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col justify-evenly ml-[20px] h-[126px] w-[200px] sm:mt-12">
+                    <h1 className="text-[12px] sm:text-[18px]">
+                      Peserta Terbaik ICC Season 2
+                    </h1>
+                    <div className="flex items-center gap-1 sm:gap-2 animate-pulse">
+                      <div className="bg-red-500 w-[7px] sm:w-[10px] rounded-full h-[7px] sm:h-[10px]"></div>
+                      <span className="text-[9px] sm:text-[12px] text-red-500">
+                        {differenceInDays3} hari yang lalu
+                      </span>
+                    </div>
+                    <p className="text-[8px] sm:text-[13px] w-[180px] mb-1">
+                      Event ICC S2 telah hadir dan mencetak talenta baru! Tema
+                      Fullstack Development dengan menggunakan ReactJS dan
+                      Golang
+                    </p>
+                  </div>
+                </Link>
+              </div>
+              {/* Slide */}
+              <div className="w-[212px] sm:w-[263px] hover:opacity-80 duration-300 mt-[30px]">
+                <Link
+                  to="/Pmm"
+                  className="flex flex-col w-[210px] h-[330px] sm:w-[261px] sm:h-[430px] font-semibold bg-white rounded-[0.64rem]"
+                >
+                  <div className="w-auto h-[200px] rounded-t-[0.64rem] text-center">
+                    <img
                       src={pmm}
                       alt="pmm"
                       className="rounded-t-[0.58rem] h-full group-hover:opacity-90 object-cover"
