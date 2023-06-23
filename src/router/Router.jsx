@@ -11,6 +11,8 @@ const Ramadhan = lazy(() => import("../pages/News/Ramadhan"));
 const Bhs = lazy(() => import("../pages/News/Bhs"));
 const Duel = lazy(() => import("../pages/News/Duel"));
 const OpenAi = lazy(() => import("../pages/News/OpenAi"));
+const Pmm = lazy(() => import("../pages/News/Pmm"));
+const Icc2 = lazy(() => import("../pages/News/Icc2"));
 const Error = lazy(() => import("../pages/Error"));
 // const Loading = lazy(() => import("../components/Loading"));
 
@@ -30,6 +32,8 @@ const Router = () => {
         <Route path="/Duel" element={<Duel />} />
         <Route path="/OpenAi" element={<OpenAi />} />
         <Route path="/Ramadhan" element={<Ramadhan />} />
+        <Route path="/Pmm" element={<Pmm />} />
+        <Route path="/icc2" element={<Icc2 />} />
       </Routes>
     </BrowserRouter>
   );
