@@ -20,7 +20,7 @@ const Event = () => {
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            <h2 className="text-white font-semibold">Event</h2>
+            <h2 className="text-white font-semibold">Timeline</h2>
           </div>
         </div>
         {/* mobile */}

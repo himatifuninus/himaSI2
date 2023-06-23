@@ -43,7 +43,7 @@ const App = () => {
         data-aos-duration="1000"
         data-aos-once="true"
       >
-        <h1 className="bg-[#020181] text-white font-semibold p-4 rounded-lg mb-12 w-fit">
+        <h1 className="bg-[#020181] text-white font-semibold p-4 rounded-lg mb-12 w-fit md:ml-[5vw]">
           Achievments
         </h1>
       </div>

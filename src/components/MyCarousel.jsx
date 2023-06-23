@@ -64,7 +64,7 @@ const Berita = () => {
     // ======================================
     // ==============Dekstop=================
     // ======================================
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-10 md:mt-[10vw]">
       <div className="hidden md:block">
         <div className="flex justify-center">
           <div
@@ -126,7 +126,7 @@ const Berita = () => {
                         />
                       </div>
                       <div className="flex flex-col justify-evenly ml-[20px] mt-[26px] lg:mt-[16px] h-[126px] lg:h-[156px] w-[200px]">
-                        <h1 className="text-[16px] lg:text-[18px]">
+                        <h1 className="text-[16px] lg:text-[14px]">
                           Mahasiswa Informatika lolos PMM 2023
                         </h1>
                         <div className="flex items-center gap-2 animate-pulse">
@@ -158,7 +158,7 @@ const Berita = () => {
                         />
                       </div>
                       <div className="flex flex-col justify-evenly ml-[20px] mt-[24px] lg:mt-[10px] h-[126px] lg:h-[156px] w-[200px] ">
-                        <h1 className="text-[16px] lg:text-[18px]">
+                        <h1 className="text-[16px] lg:text-[16px]">
                           Ramadhan berkah bersama Teknik jilid VII
                         </h1>
                         <div className="flex items-center gap-2 animate-pulse">
