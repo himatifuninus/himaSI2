@@ -9,6 +9,8 @@ import goAndRust from "../assets/goAndRust.png";
 import chatGPTvsGoogle from "../assets/chatGPTvsGoogle.png";
 import openAi from "../assets/openai.png";
 import ramadhan from "../assets/ramadhan-berkah.jpg";
+import pmm from "../assets/pmm2.jpg";
+import icc2 from "../assets/icc22.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -37,18 +39,25 @@ const Berita = () => {
 
   const [differenceInDays, setDifferenceInDays] = useState(0);
   const [differenceInDays2, setDifferenceInDays2] = useState(0);
+  const [differenceInDays3, setDifferenceInDays3] = useState(0);
 
   const today = new Date();
   const targetDate = new Date("2023-03-11");
   const targetDate2 = new Date("2023-04-06");
+  const targetDate3 = new Date("2023-06-23");
 
   useEffect(() => {
+    // Set time
     const differenceInTime = today.getTime() - targetDate.getTime();
     const differenceInTime2 = today.getTime() - targetDate2.getTime();
+    const differenceInTime3 = today.getTime() - targetDate3.getTime();
+    // Set day
     const differenceInDays = differenceInTime / (1000 * 3600 * 24);
     const differenceInDays2 = differenceInTime2 / (1000 * 3600 * 24);
+    const differenceInDays3 = differenceInTime3 / (1000 * 3600 * 24);
     setDifferenceInDays(Math.floor(differenceInDays));
     setDifferenceInDays2(Math.floor(differenceInDays2));
+    setDifferenceInDays3(Math.floor(differenceInDays3));
   }, [targetDate, today]);
 
   return (
@@ -71,11 +80,75 @@ const Berita = () => {
             <div>
               <div>
                 <Carousel responsive={responsive} className="mx-[6vw]">
+                  {/* slide */}
+                  <div className="w-[264px] hover:opacity-80 duration-300">
+                    <Link
+                      to="/icc2"
+                      className="flex flex-col w-[261px] lg:w-[281px] h-[400px] lg:h-[412px] font-semibold bg-white rounded-[11px]"
+                    >
+                      <div className="w-auto h-[220px] rounded-t-[9px] text-center">
+                        <img
+                          src={icc2}
+                          alt="icc2"
+                          className="rounded-t-md h-full object-cover"
+                        />
+                      </div>
+                      <div className="flex flex-col justify-evenly ml-[20px] mt-[26px] lg:mt-[14px] h-[126px] lg:h-[156px] w-[200px]">
+                        <h1 className="text-[16px] lg:text-[18px]">
+                          Peserta Terbaik ICC Season 2
+                        </h1>
+                        <div className="flex items-center gap-2 animate-pulse">
+                          <div className="bg-red-500 w-[10px] rounded-full h-[10px]"></div>
+                          <span className="text-[12px] lg:text-[13px] text-red-500">
+                            {differenceInDays3} hari yang lalu
+                          </span>
+                        </div>
+                        <p className="text-[13px] lg:text-[12px]">
+                          Event ICC S2 telah hadir dan mencetak talenta baru!
+                          Tema Fullstack Development dengan menggunakan ReactJS
+                          dan Golang
+                        </p>
+                      </div>
+                    </Link>
+                  </div>
+
+                  {/* slide */}
+                  <div className="w-[264px] hover:opacity-80 duration-300">
+                    <Link
+                      to="/Pmm"
+                      className="flex flex-col w-[261px] lg:w-[281px] h-[400px] lg:h-[412px] font-semibold bg-white rounded-[11px]"
+                    >
+                      <div className="w-auto h-[220px] rounded-t-[9px] text-center">
+                        <img
+                          src={pmm}
+                          alt="pmm"
+                          className="rounded-t-md h-full object-cover"
+                        />
+                      </div>
+                      <div className="flex flex-col justify-evenly ml-[20px] mt-[26px] lg:mt-[16px] h-[126px] lg:h-[156px] w-[200px]">
+                        <h1 className="text-[16px] lg:text-[18px]">
+                          Mahasiswa Informatika lolos PMM 2023
+                        </h1>
+                        <div className="flex items-center gap-2 animate-pulse">
+                          <div className="bg-red-500 w-[10px] rounded-full h-[10px]"></div>
+                          <span className="text-[12px] lg:text-[13px] text-red-500">
+                            {differenceInDays3} hari yang lalu
+                          </span>
+                        </div>
+                        <p className="text-[13px] lg:text-[12px]">
+                          Dua Mahasiswa Informatika lolos Program Pertukaran
+                          mahasiswa Merdeka yang diselenggarakan oleh
+                          Kemendikbudristek Indonesia pada tahun 2023.
+                        </p>
+                      </div>
+                    </Link>
+                  </div>
+
                   {/* slide 1 */}
                   <div className="w-[264px] hover:opacity-80 duration-300">
                     <Link
-                      to="../Ramadhan"
-                      className="flex flex-col w-[261px] lg:w-[281px] h-[378px] lg:h-[412px] font-semibold bg-white rounded-[11px]"
+                      to="/Ramadhan"
+                      className="flex flex-col w-[261px] lg:w-[281px] h-[400px] lg:h-[412px] font-semibold bg-white rounded-[11px]"
                     >
                       <div className="w-auto h-[220px] rounded-t-[9px] text-center">
                         <img
@@ -84,8 +157,8 @@ const Berita = () => {
                           className="rounded-t-md h-full object-cover"
                         />
                       </div>
-                      <div className="flex flex-col justify-evenly ml-[20px] mt-[2px] lg:mt-[8px] h-[126px] lg:h-[156px] w-[200px] ">
-                        <h1 className="text-[20px] lg:text-[18px]">
+                      <div className="flex flex-col justify-evenly ml-[20px] mt-[24px] lg:mt-[10px] h-[126px] lg:h-[156px] w-[200px] ">
+                        <h1 className="text-[16px] lg:text-[18px]">
                           Ramadhan berkah bersama Teknik jilid VII
                         </h1>
                         <div className="flex items-center gap-2 animate-pulse">
@@ -106,7 +179,7 @@ const Berita = () => {
                   {/* slide 2 */}
                   <div className="w-[264px] hover:opacity-80 duration-300">
                     <Link
-                      to="../Society"
+                      to="/Society"
                       className="flex flex-col w-[261px] lg:w-[281px] h-[378px] lg:h-[412px] font-semibold bg-white rounded-[11px]"
                     >
                       <div className="w-auto h-[220px] rounded-t-[9px] text-center">
@@ -137,7 +210,7 @@ const Berita = () => {
                   {/* slide 3 */}
                   <div className="w-[264px] hover:opacity-80 duration-300">
                     <Link
-                      to="../Bhs"
+                      to="/Bhs"
                       className="flex flex-col w-[261px] lg:w-[281px] h-[378px] lg:h-[412px] font-semibold bg-white rounded-[11px]"
                     >
                       <div className="w-auto h-[220px] rounded-t-[9px] text-center">
@@ -168,7 +241,7 @@ const Berita = () => {
                   {/* slide 4 */}
                   <div className="w-[264px] hover:opacity-80 duration-300">
                     <Link
-                      to="../Duel"
+                      to="/Duel"
                       className="flex flex-col w-[261px] lg:w-[281px] h-[378px] lg:h-[412px] font-semibold bg-white rounded-[11px]"
                     >
                       <div className="w-auto h-[220px] rounded-t-[9px] text-center">
@@ -199,7 +272,7 @@ const Berita = () => {
                   {/* slide 5 */}
                   <div className="w-[264px] hover:opacity-80 duration-300">
                     <Link
-                      to="../OpenAi"
+                      to="/OpenAi"
                       className="flex flex-col w-[261px] lg:w-[281px] h-[378px] lg:h-[412px] font-semibold bg-white rounded-[11px]"
                     >
                       <div className="w-auto h-[220px] rounded-t-[9px] text-center">
@@ -246,11 +319,43 @@ const Berita = () => {
             </h2>
 
             <div className="pl-[46px] sm:pl-[66px] pt-[10px]">
-              {/* Slide 1 */}
+              {/* Slide */}
               <div className="w-[212px] sm:w-[263px] hover:opacity-80 duration-300">
                 <Link
-                  to="../Ramadhan"
-                  className="flex flex-col w-[210px] h-[285px] sm:w-[261px] sm:h-[358px] font-semibold bg-white rounded-[0.64rem]"
+                  to="/Pmm"
+                  className="flex flex-col w-[210px] h-[330px] sm:w-[261px] sm:h-[430px] font-semibold bg-white rounded-[0.64rem]"
+                >
+                  <div className="w-auto h-[200px] rounded-t-[0.64rem] text-center">
+                    <img
+                      src={pmm}
+                      alt="pmm"
+                      className="rounded-t-[0.58rem] h-full group-hover:opacity-90 object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col justify-evenly ml-[20px] h-[126px] w-[200px] sm:mt-12">
+                    <h1 className="text-[14px] sm:text-[18px]">
+                      Mahasiswa Informatika lolos PMM 2023
+                    </h1>
+                    <div className="flex items-center gap-1 sm:gap-2 animate-pulse">
+                      <div className="bg-red-500 w-[7px] sm:w-[10px] rounded-full h-[7px] sm:h-[10px]"></div>
+                      <span className="text-[9px] sm:text-[12px] text-red-500">
+                        {differenceInDays3} hari yang lalu
+                      </span>
+                    </div>
+                    <p className="text-[8px] sm:text-[13px] w-[180px] mb-1">
+                      Dua Mahasiswa Informatika lolos Program Pertukaran
+                      mahasiswa Merdeka yang diselenggarakan oleh
+                      Kemendikbudristek Indonesia pada tahun 2023.
+                    </p>
+                  </div>
+                </Link>
+              </div>
+
+              {/* Slide 1 */}
+              <div className="w-[212px] sm:w-[263px] hover:opacity-80 duration-300 mt-[30px]">
+                <Link
+                  to="/Ramadhan"
+                  className="flex flex-col w-[210px] h-[300px] sm:w-[261px] sm:h-[450px] font-semibold bg-white rounded-[0.64rem]"
                 >
                   <div className="w-auto h-[200px] rounded-t-[0.64rem] text-center">
                     <img
@@ -259,8 +364,8 @@ const Berita = () => {
                       className="rounded-t-[0.58rem] h-full group-hover:opacity-90 object-cover"
                     />
                   </div>
-                  <div className="flex flex-col justify-evenly ml-[20px] h-[126px] w-[200px] sm:mt-3">
-                    <h1 className="text-[14px] sm:text-[25px]">
+                  <div className="flex flex-col justify-evenly ml-[20px] h-[126px] w-[200px] sm:mt-12 ">
+                    <h1 className="text-[14px] sm:text-[18px]">
                       Ramadhan berkah bersama Teknik jilid VII
                     </h1>
                     <div className="flex items-center gap-1 sm:gap-2 animate-pulse">
