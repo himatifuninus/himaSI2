@@ -1,8 +1,9 @@
 import { useEffect } from "react";
-import Discuss from "../assets/makrab-2023.jpg";
+import iccSeason2 from "../assets/iccSeason2.jpg";
 import Discuss2 from "../assets/icc.jpg";
 import studyBanding from "../assets/study-banding.jpeg";
 import codingImage from "../assets/6.png";
+import diesnat5 from "../assets/diesnat5.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -20,7 +21,7 @@ const Event = () => {
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            <h2 className="text-white font-semibold">Timeline</h2>
+            <h2 className="text-white font-semibold">Timelines</h2>
           </div>
         </div>
         {/* mobile */}
@@ -28,9 +29,9 @@ const Event = () => {
           <div className="w-[80vw] h-[80vh]">
             <div className="h-[17vh] flex">
               <div className="w-[49%] flex flex-col items-end justify-center pr-5">
-                <h3 className="text-semibold">Makrab 2023</h3>
+                <h3 className="text-semibold">Pelatihan ICC</h3>
                 <h3 className="text-[#5BCDA4] text-semibold text-[0.8rem]">
-                  18 - 19 Maret 2023
+                  6 Mei - 3 Juni 2023
                 </h3>
               </div>
               <div className="flex items-end w-[2%]">
@@ -51,7 +52,7 @@ const Event = () => {
               </div>
               <div className="w-[37%] flex items-center pl-2">
                 <img
-                  src={Discuss}
+                  src={iccSeason2}
                   alt="Discuss"
                   className="shadow-md w-[100px] h-[70px] rounded-md border-2 border-slate-300 object-cover"
                   data-aos="zoom-in"
@@ -63,9 +64,9 @@ const Event = () => {
             <div className="h-[17vh] flex">
               <div className="w-[37%] flex items-center pr-2 justify-end">
                 <img
-                  src={Discuss2}
+                  src={diesnat5}
                   alt="Discuss"
-                  className="shadow-md w-[100px] h-[70px] rounded-md border-2 border-slate-300 object-cover"
+                  className="shadow-md w-[100px] h-[70px] rounded-md border-2 border-slate-300 object-fill"
                   data-aos="zoom-in"
                   data-aos-duration="800"
                   data-aos-once="true"
@@ -88,9 +89,9 @@ const Event = () => {
                 ></div>
               </div>
               <div className="w-[49%] flex flex-col justify-center pl-5">
-                <h3 className="text-semibold text-[1rem]">Pelatihan ICC</h3>
+                <h3 className="text-semibold text-[1rem]">Diesnatalis 5</h3>
                 <h3 className="text-[#5BCDA4] text-semibold text-[0.8rem]">
-                  6 Mei - 3 Juni 2023
+                  24 Juni 2023
                 </h3>
               </div>
             </div>
@@ -172,7 +173,7 @@ const Event = () => {
             <div className=" h-[210px]">
               <div className=" h-[70%] flex justify-center items-center">
                 <img
-                  src={Discuss}
+                  src={iccSeason2}
                   alt="Discuss"
                   className="shadow-md w-[150px] h-[100px] rounded-lg border border-slate-300 object-cover"
                   data-aos="zoom-in"
@@ -198,18 +199,18 @@ const Event = () => {
               ></div>
             </div>
             <div className="h-[75px] flex justify-center flex-col items-center">
-              <h3 className="text-semibold text-[1.2rem]">Makrab 2023</h3>
+              <h3 className="text-semibold text-[1.2rem]">Pelatihan ICC</h3>
               <h3 className="text-[#5BCDA4] text-semibold text-[1rem]">
-                18 - 19 Maret 2023
+                6 Mei - 3 Juni 2023
               </h3>
             </div>
           </div>
           <div className="w-[27%] h-[430px]">
             <div className="h-[210px] flex items-end justify-center">
               <div className="h-[75px] flex justify-center flex-col items-center">
-                <h3 className="text-semibold text-[1.2rem]">Pelatihan ICC</h3>
+                <h3 className="text-semibold text-[1.2rem]">Diesnatalis 5</h3>
                 <h3 className="text-[#5BCDA4] text-semibold text-[1rem]">
-                  6 Mei - 3 Juni 2023
+                  24 Juni 2023
                 </h3>
               </div>
             </div>
@@ -231,7 +232,7 @@ const Event = () => {
             </div>
             <div className="flex justify-center items-center">
               <img
-                src={Discuss2}
+                src={diesnat5}
                 alt="Discuss"
                 className="shadow-md w-[150px] h-[100px] rounded-lg border border-slate-300 object-cover"
                 data-aos="zoom-in"
