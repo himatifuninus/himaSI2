@@ -111,10 +111,8 @@ const Berita = () => {
                             )}
                           </span>
                         </div>
-                        <p className="text-[13px] lg:text-[12px]">
+                        <p className="text-[13px] lg:text-[14px]">
                           Event ICC S2 telah hadir dan mencetak talenta baru!
-                          Tema Fullstack Development dengan menggunakan ReactJS
-                          dan Golang
                         </p>
                       </div>
                     </Link>
@@ -152,9 +150,8 @@ const Berita = () => {
                           </span>
                         </div>
                         <p className="text-[13px] lg:text-[12px]">
-                          Dua Mahasiswa Informatika lolos Program Pertukaran
-                          mahasiswa Merdeka yang diselenggarakan oleh
-                          Kemendikbudristek Indonesia pada tahun 2023.
+                          Mahasiswa Informatika lolos PMM yang diselenggarakan
+                          oleh Kemendikbudristek Indonesia pada tahun 2023
                         </p>
                       </div>
                     </Link>
@@ -184,9 +181,8 @@ const Berita = () => {
                           </span>
                         </div>
                         <p className="text-[13px] lg:text-[12px]">
-                          Senat mahasiswa fakultas teknik mengundang 30 orang
-                          anak yatim dari rumah creative yatim dhuafa Al-Hikmah
-                          Kopo Kabupaten Bandung.
+                          SEMA FTEK mengundang para anak yatim dari rumah
+                          creative yatim dhuafa Al-Hikmah Kopo Kabupaten Bandung
                         </p>
                       </div>
                     </Link>
@@ -217,7 +213,7 @@ const Berita = () => {
                         </div>
                         <p className="text-[13px] lg:text-[14px]">
                           Society 5.0 konsep terbaru dalam kehidupan teknologi
-                          di zaman sekarang.
+                          di zaman sekarang
                         </p>
                       </div>
                     </Link>
@@ -248,7 +244,7 @@ const Berita = () => {
                         </div>
                         <p className="text-[13px] lg:text-[14px]">
                           Dua Bahasa Pemprograman yang sedang naik daun dan
-                          dicari oleh perusahaan ternama.
+                          dicari oleh perusahaan ternama
                         </p>
                       </div>
                     </Link>
@@ -308,7 +304,7 @@ const Berita = () => {
                         </div>
                         <p className="text-[13px] lg:text-[14px]">
                           Open Ai Merupakan sebuah perusahaan AI yang sedang
-                          menjadi buah bibir di dunia maya saat ini.
+                          menjadi buah bibir di dunia maya saat ini
                         </p>
                       </div>
                     </Link>
@@ -338,7 +334,7 @@ const Berita = () => {
               {/* Slide */}
               <div className="w-[212px] sm:w-[263px] hover:opacity-80 duration-300">
                 <Link
-                  to="/Pmm"
+                  to="/icc2"
                   className="flex flex-col w-[210px] h-[330px] sm:w-[261px] sm:h-[430px] font-semibold bg-white rounded-[0.64rem]"
                 >
                   <div className="w-auto h-[200px] rounded-t-[0.64rem] text-center">
@@ -356,20 +352,18 @@ const Berita = () => {
                       <div className="bg-red-500 w-[7px] sm:w-[10px] rounded-full h-[7px] sm:h-[10px]"></div>
                       <span className="text-[9px] sm:text-[12px] text-red-500">
                         {differenceInDays3 === 0 ? (
-                          <span className="text-[12px] lg:text-[13px] text-red-500">
+                          <span className="text-[9px] sm:text-[12px] lg:text-[13px] text-red-500">
                             Terbaru
                           </span>
                         ) : (
-                          <span className="text-[12px] lg:text-[13px] text-red-500">
+                          <span className="text-[9px] sm:text-[12px] lg:text-[13px] text-red-500">
                             {differenceInDays3} hari yang lalu
                           </span>
                         )}
                       </span>
                     </div>
                     <p className="text-[8px] sm:text-[13px] w-[180px] mb-1">
-                      Event ICC S2 telah hadir dan mencetak talenta baru! Tema
-                      Fullstack Development dengan menggunakan ReactJS dan
-                      Golang
+                      Event ICC S2 telah hadir dan mencetak talenta baru!
                     </p>
                   </div>
                 </Link>
@@ -395,20 +389,19 @@ const Berita = () => {
                       <div className="bg-red-500 w-[7px] sm:w-[10px] rounded-full h-[7px] sm:h-[10px]"></div>
                       <span className="text-[9px] sm:text-[12px] text-red-500">
                         {differenceInDays3 === 0 ? (
-                          <span className="text-[12px] lg:text-[13px] text-red-500">
+                          <span className="text-[9px] sm:text-[12px] lg:text-[13px] text-red-500">
                             Terbaru
                           </span>
                         ) : (
-                          <span className="text-[12px] lg:text-[13px] text-red-500">
+                          <span className="text-[9px] sm:text-[12px] lg:text-[13px] text-red-500">
                             {differenceInDays3} hari yang lalu
                           </span>
                         )}
                       </span>
                     </div>
                     <p className="text-[8px] sm:text-[13px] w-[180px] mb-1">
-                      Dua Mahasiswa Informatika lolos Program Pertukaran
-                      mahasiswa Merdeka yang diselenggarakan oleh
-                      Kemendikbudristek Indonesia pada tahun 2023.
+                      Mahasiswa Informatika lolos PMM yang diselenggarakan oleh
+                      Kemendikbudristek Indonesia pada tahun 2023
                     </p>
                   </div>
                 </Link>
@@ -438,9 +431,8 @@ const Berita = () => {
                       </span>
                     </div>
                     <p className="text-[8px] sm:text-[13px] w-[180px] mb-1">
-                      Senat mahasiswa fakultas teknik mengundang 30 orang anak
-                      yatim dari rumah creative yatim dhuafa Al-Hikmah Kopo
-                      Kabupaten Bandung.
+                      SEMA FTEK mengundang para anak yatim dari rumah creative
+                      yatim dhuafa Al-Hikmah Kopo Kabupaten Bandung
                     </p>
                   </div>
                 </Link>
@@ -471,7 +463,7 @@ const Berita = () => {
                     </div>
                     <p className="text-[10px] sm:text-[13px] w-[180px]">
                       Society 5.0 konsep terbaru dalam kehidupan teknologi di
-                      zaman sekarang.
+                      zaman sekarang
                     </p>
                   </div>
                 </Link>
@@ -503,7 +495,7 @@ const Berita = () => {
                     </div>
                     <p className="text-[10px] sm:text-[13px] w-[180px]">
                       Dua Bahasa Pemprograman yang sedang naik daun dan dicari
-                      oleh perusahaan ternama.
+                      oleh perusahaan ternama
                     </p>
                   </div>
                 </Link>
@@ -541,7 +533,7 @@ const Berita = () => {
               </div>
 
               {/* Slide 5 */}
-              <div className="w-[212px] sm:w-[263px] mt-[30px] hover:opacity-80 duration-300">
+              <div className="w-[212px] sm:w-[263px] mt-[30px] hover:opacity-80 duration-300 mb-8">
                 <Link
                   to="../OpenAi"
                   className="flex flex-col w-[210px] h-[332px] sm:w-[261px] sm:h-[429px] font-semibold bg-white rounded-[0.64rem]"
@@ -565,7 +557,7 @@ const Berita = () => {
                     </div>
                     <p className="text-[10px] sm:text-[13px] w-[180px]">
                       Open Ai Merupakan sebuah perusahaan AI yang sedang menjadi
-                      buah bibir di dunia maya saat ini.
+                      buah bibir di dunia maya saat ini
                     </p>
                   </div>
                 </Link>
